@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "FRONT-School"
+    }
+  },
+  "defaultProject": "FRONT-School",
+  "cli": {
+    "analytics": "cf499828-4c14-4267-aec9-6c36c99fcefa"
+  }
 }

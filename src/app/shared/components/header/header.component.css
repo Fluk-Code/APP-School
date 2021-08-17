@@ -1,0 +1,11 @@
+header {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  padding: 2rem;
+}
+
+.separator {
+  height: 1px;
+  background-color: var(--color-separator);
+  margin: 1rem 0;
+}

@@ -1,0 +1,28 @@
+<app-header></app-header>
+<app-toolbar></app-toolbar>
+
+<p class="noCourses" *ngIf="!courses">
+  Nenhum curso cadastrado
+</p>
+
+<div class="cards">
+
+  <div class="card" *ngFor="let course of courses">
+
+    <div class="top">
+      <span class="id">#{{course.id}}</span>
+      <span class="created_at">{{course.created_at | date:'short'}}</span>
+    </div>
+
+    <h1>{{course.description}}</h1>
+    <p class="details">{{course.program}}</p>
+
+
+    <a [routerLink]="['../register/'+course.id]">
+      <img src="../../../../assets/images/info-24.svg" alt="Icone de detalhes">
+      Detalhes
+    </a>
+
+  </div>
+
+</div>

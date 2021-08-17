@@ -1,0 +1,72 @@
+<app-header-lite titulo="Casdastro de cursos" routerBack="" ></app-header-lite>
+
+<div *ngIf="courseForm">
+  <form [formGroup]="courseForm" (ngSubmit)="submit()" (ngReset)="cleanForm()">
+
+    <section class="container">
+
+      <label for="description">* Descrição</label>
+      <input type="text" name="description" formControlName="description" value="{{description}}" >
+      <div class="message-error">
+
+        <app-message-input
+          *ngIf="
+            courseForm.get('description')?.errors?.required &&
+            courseForm.touched
+          "
+          message="Descrição obrigatória."
+        ></app-message-input>
+
+        <app-message-input
+          *ngIf="
+            courseForm.get('description')?.errors?.maxlength &&
+            courseForm.touched
+          "
+          message="Quantidade maxima de 30 caracteres"
+        >
+        </app-message-input>
+
+      </div>
+
+      <label for="program">* Ementa do curso</label>
+      <textarea rows="5" name="program" formControlName="program" value="{{program}}" ></textarea>
+      <div class="message-error">
+        <app-message-input
+          *ngIf="
+            courseForm.touched &&
+            courseForm.get('program')?.errors?.required
+          "
+
+          message="A ementa é obrigatória"
+        ></app-message-input>
+      </div>
+
+
+      <button type="reset" class="reset">
+        Limpar campos
+      </button>
+
+    </section>
+
+    <section class="options">
+      <img src="../../../../assets/images/course-72.png" alt="Imagem curso">
+
+      <div class="button-group">
+        <button type="submit" class="button save">
+          Salvar
+        </button>
+
+        <button type="button" class="button next" *ngIf="id" [routerLink]="['students']">
+          Ver matriculas
+        </button>
+
+        <button type="button" class="button delete" *ngIf="id" (click)="delete()">
+          Excluir
+        </button>
+      </div>
+    </section>
+
+  </form>
+
+</div>
+

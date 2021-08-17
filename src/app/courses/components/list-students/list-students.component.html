@@ -1,0 +1,23 @@
+<app-header-lite titulo="Alunos matriculados" routerBack="/courses/register/{{id_course}}" ></app-header-lite>
+
+<div class="container">
+
+  <p *ngIf="!enrollments"> Nenhum aluno foi matriculado</p>
+
+  <table *ngIf="enrollments">
+    <thead>
+      <tr>
+        <th>Matricula</th>
+        <th colspan="3">Aluno</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let enrollment of enrollments">
+        <td>{{enrollment.created_at | date:'short'}}</td>
+        <td width="80%">{{enrollment.student.name}}</td>
+        <td><a (click)="unenroll()"> <img src="../../../../assets/images/trash-24.svg" alt=""> </a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

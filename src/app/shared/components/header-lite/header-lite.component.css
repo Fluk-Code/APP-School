@@ -1,0 +1,15 @@
+nav {
+  background: var(--color-primary);
+  width: 100vw;
+  padding: 1rem 2rem;
+
+  display: grid;
+  grid-template-columns: 5% 95%;
+}
+
+
+h3 {
+  color: var(--color-text);
+  text-align: center;
+}
+

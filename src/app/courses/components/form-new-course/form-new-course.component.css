@@ -1,0 +1,117 @@
+
+form {
+  padding: 2rem 1.5rem;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.container {
+  width: 100vw;
+  margin: 1rem
+}
+
+.message-error{
+  height: 1.5rem;
+}
+
+label {
+  margin-top: 1rem;
+}
+
+input, textarea {
+  font-weight: 500;
+  color: var(--color-primary);
+
+  border: 2px solid #E1E3E6;
+
+  border-radius: .313rem;
+  background-color: var(--color-background);
+
+  padding: 0.75rem 1.5rem;
+
+  width: 100%;
+}
+
+
+input:focus, textarea:focus  {
+  outline: none;
+  border: solid 2px var(--color-secondary);
+  border-radius: .313rem;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.options {
+  width: 25vw;
+  height: 100%;
+
+  padding: 2.5rem;
+
+  background-color: var(--color-text);
+
+  border: solid 1px #E1E3E6;
+  border-radius: .5rem;
+
+}
+
+img {
+  display: block;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+.button-group {
+  display: grid;
+  grid-template-rows: repeat(3 1fr);
+}
+
+.button {
+  width: 100%;
+  padding: 0.7rem ;
+
+  margin-top: 0.7rem;
+
+  border: none;
+  border-radius: 5px;
+
+  cursor: pointer;
+
+
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.button.save {
+  background: var(--color-save);
+  color: white;
+}
+
+.button.next {
+  background: var(--color-next);
+  color: white;
+}
+
+.button.delete {
+  background: var(--color-delete);
+  color: white;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+.reset {
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  float: right;
+}
+
+.reset:hover {
+  opacity: 0.8;
+}

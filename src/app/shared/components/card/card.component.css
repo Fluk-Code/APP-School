@@ -1,0 +1,15 @@
+div {
+  padding: 1.5rem;
+  background-color: var(--color-primary);
+  color: var(--color-text);
+}
+
+.top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contend {
+  margin-bottom: 0.5rem;
+}
